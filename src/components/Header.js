@@ -1,6 +1,8 @@
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button} from "@nextui-org/react";
 import {AcmeLogo} from "./Logo";
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -25,7 +27,7 @@ export default function Header() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link to='/' color="foreground" href="#">
             Home
           </Link>
         </NavbarItem>
@@ -42,11 +44,13 @@ export default function Header() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link to='/login'>Login</Link>
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button color="primary" href="#" variant="flat">
+        <Link to='/signup'>
             Sign Up
+        </Link>
           </Button>
         </NavbarItem>
       </NavbarContent>

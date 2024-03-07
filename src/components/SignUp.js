@@ -41,23 +41,19 @@ export default function SignUp() {
                   <span className="ml-3">Sign Up</span>
                 </button>
                 <p className="mt-6 text-xs text-gray-600 text-center">
-                  I agree to abide by templatana's
-                  <Link
-                    href="#"
-                    className="border-b border-gray-500 border-dotted"
-                  >
-                    Terms of Service
+                  I agree to
+                  <Link href="#" className="border-b border-gray-500 border-dotted">
+                   Terms of Service
                   </Link>
                   and its
-                  <Link
-                    href="#"
-                    className="border-b border-gray-500 border-dotted"
-                  >
+                  <Link href="#" className="border-b border-gray-500 border-dotted">
                     Privacy Policy
                   </Link>
                 </p>
               </div>
-
+              <div className="mt-3">
+                <h1>Do you hav a account <Link to='/login' className="text-red-500"> SignIn</Link></h1>
+              </div>
               <div className="w-full flex-1 mt-8">
                 <div className="flex flex-col items-center">
                   <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
@@ -81,7 +77,7 @@ export default function SignUp() {
                         />
                       </svg>
                     </div>
-                    <span className="ml-4">Sign Up with Google</span>
+                    <span className="ml-1">Sign Up with Google</span>
                   </button>
                 </div>
               </div>
