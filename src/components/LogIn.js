@@ -41,13 +41,14 @@ export default function LogIn() {
                   <span className="ml-3">Log In</span>
                 </button>
                 <p className="mt-6 text-xs text-gray-600 text-center">
-                  I agree to
+                  I agree to 
                   <Link href="#" className="border-b border-gray-500 border-dotted">
-                   Terms of Service
+                  <span> Terms of Service</span>
                   </Link>
-                  and its
+                  <span> and</span>
+                   
                   <Link href="#" className="border-b border-gray-500 border-dotted">
-                    Privacy Policy
+                  <span> Privacy Policy</span>
                   </Link>
                 </p>
               </div>

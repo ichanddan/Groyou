@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
+import Contect from "./components/Contect";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/login" element={<LogIn/>}/>
+        <Route path="/contect" element={<Contect/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

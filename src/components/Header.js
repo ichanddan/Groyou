@@ -20,24 +20,25 @@ export default function Header() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <AcmeLogo />
+          <AcmeLogo/>   
+          <Link to='/'>
           <p className="font-bold text-inherit">ACME</p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
-
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link to='/' color="foreground" href="#">
+        <NavbarItem isActive>
+          <Link to='/' color="foreground">
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+        <NavbarItem>
+          <Link aria-current="page">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link to='/contect' color="foreground" >
             Contect
           </Link>
         </NavbarItem>
@@ -47,7 +48,7 @@ export default function Header() {
           <Link to='/login'>Login</Link>
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
-          <Button color="primary" href="#" variant="flat">
+          <Button color="primary" variant="flat">
         <Link to='/signup'>
             Sign Up
         </Link>
