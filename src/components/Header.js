@@ -33,7 +33,7 @@ export default function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link aria-current="page">
+          <Link aria-current="page" to='/about'>
             About
           </Link>
         </NavbarItem>
@@ -47,7 +47,7 @@ export default function Header() {
         <NavbarItem className="hidden lg:flex">
           <Link to='/login'>Login</Link>
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
+        <NavbarItem className=" lg:flex">
           <Button color="primary" variant="flat">
         <Link to='/signup'>
             Sign Up
