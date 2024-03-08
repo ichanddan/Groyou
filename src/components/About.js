@@ -604,7 +604,7 @@ export default function About() {
       <div className="text-center mt-10">
         <h1 className="font-bold text-4xl">About Me</h1>
         <div className="grid place-items-center m-2">
-          <div className="sm:w-1/2 p-20 border rounded-2xl" data-tilt>
+          <div className="sm:w-1/2 p-20 border rounded-2xl bg-slate-50" data-tilt>
             <Image className="rounded-full " src="/chandan.jpeg" />
             <div className="mt-5">
               <h1 className="text-2xl">Chandan Kumar Maurya</h1>
@@ -613,9 +613,12 @@ export default function About() {
                 personaly Manage My Team{" "}
               </p>
             </div>
+            <div className="flex">
+              
+            </div>
             <div className="m-5">
               <Link
-                className="border p-3 rounded-2xl hover:bg-slate-500 text-white"
+                className="border p-3 rounded-2xl bg-slate-500 text-white"
                 to="https://linkedin.com/in/ichanddan"
               >
                 More

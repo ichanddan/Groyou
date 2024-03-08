@@ -1,6 +1,7 @@
 import { Image } from "@nextui-org/react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 import React from "react";
+import About from "./About";
 
 export default function Home() {
   const defaultContent =
@@ -119,13 +120,13 @@ export default function Home() {
                 <div className="flex items-center justify-center">
                   <div className="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full">
                     <Image
-                      src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1700&amp;q=80"
+                      src="/chandan.jpeg"
                       className="object-cover w-full h-full"
                     />
                   </div>
                   <div className="flex flex-col items-start justify-center">
                     <h4 className="font-bold text-gray-800">Chandan Kumar Maurya</h4>
-                    <p className="text-gray-600">CEO of Something</p>
+                    <p className="text-gray-600">CEO</p>
                   </div>
                 </div>
                 <blockquote className="mt-8 text-lg text-gray-500">

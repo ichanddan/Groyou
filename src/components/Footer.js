@@ -19,8 +19,10 @@ export default function Footer() {
                 Resources
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium ">
-                <li className="mb-4 hover:underline">Flowbite</li>
-                <li className="hover:underline">Tailwind CSS</li>
+                <li className="mb-2 hover:underline"><Link to='/signup'>Signup</Link></li>
+                <li className="mb-2 hover:underline"><Link to='/login'>Login</Link></li>
+                <li className="mb-2 hover:underline"><Link to='/about'>About</Link></li>
+                <li className="mb-2 hover:underline"><Link to='/contect'>Contect</Link></li>
               </ul>
             </div>
             <div>
@@ -29,13 +31,13 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <Link to='https://twitter.com/ichanddan'>
-                <li className="mb-4 hover:underline ">Twitter</li>
+                <li className="mb-2 hover:underline ">Twitter</li>
                 </Link>
                 <Link to='https://facebook.com/ichanddan'>
-                <li className="mb-4 hover:underline ">Facebook</li>
+                <li className="mb-2 hover:underline ">Facebook</li>
                 </Link>
                 <Link to='https://github.com/ichanddan'>
-                <li className="mb-4 hover:underline ">GitHub</li>
+                <li className="mb-2 hover:underline ">GitHub</li>
                 </Link>
               </ul>
             </div>
@@ -44,8 +46,8 @@ export default function Footer() {
                 Legal
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4 hover:underline">Privacy Policy</li>
-                <li className="hover:underline">Terms &amp; Conditions</li>
+                <li className="mb-2 hover:underline">Privacy Policy</li>
+                <li className="mb-2 hover:underline">Terms &amp; Conditions</li>
               </ul>
             </div>
           </div>

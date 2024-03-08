@@ -4,7 +4,7 @@ import { Input } from "@nextui-org/react";
 export default function Contect() {
   return (
     <div>
-      <div className="w-full mx-auto p-20">
+      <div className="w-full mx-auto mt-5">
         <div className=" grid grid-cols-1 md:grid-cols-12 border">
           <div className="bg-gray-900 md:col-span-4 p-10 text-white">
             <p className="mt-4 text-sm leading-7 font-regular uppercase">

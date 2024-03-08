@@ -8,6 +8,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
+    "Home",
+    "About",
+    "Contect",
+    "Login",
+    "Sign Up",
     "Profile",
     "Log Out",
   ];

@@ -6,6 +6,8 @@ import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
 import Contect from "./components/Contect";
 import About from "./components/About";
+import Blog from "./components/Blog";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/login" element={<LogIn/>}/>
         <Route path="/contect" element={<Contect/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/blog" element={<Blog/>}/>
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
