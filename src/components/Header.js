@@ -8,14 +8,15 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Home",
-    "About",
-    "Contect",
-    "Login",
-    "Sign Up",
-    "Profile",
-    "Log Out",
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Contect', href: '/contect' },
+    { name: 'Login', href: '/login' },
+    { name: 'Sign Up', href: '/signup' },
+    { name: 'Profile', href: '/profile' },
+    { name: 'Log Out', href: '/log-out' }
   ];
+  
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -47,6 +48,11 @@ export default function Header() {
             Contect
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link to='/blog' color="foreground" >
+            Blog
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
@@ -61,17 +67,17 @@ export default function Header() {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {menuItems.map((menuItem, index) => (
+          <NavbarMenuItem key={index}>
             <Link
               color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                index === 2 ? "primary" : index === menuItem.length - 1 ? "danger" : "foreground"
               }
               className="w-full"
-              href="#"
+              to={menuItem.href}
               size="lg"
             >
-              {item}
+              {menuItem.name}
             </Link>
           </NavbarMenuItem>
         ))}
