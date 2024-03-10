@@ -1,31 +1,43 @@
 import React from 'react'
-import { AcmeLogo } from './Logo'
 import { Link } from 'react-router-dom'
-import { Image } from '@nextui-org/react'
+import { Button, Image, Input } from '@nextui-org/react'
+import { EyeFilledIcon } from './passwordHide/EyeFilledIcon'
+import { EyeSlashFilledIcon } from './passwordHide/EyeSlashFilledIcon'
 
 export default function LogIn() {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const toggleVisibility = () => setIsVisible(!isVisible);
   return (
     <div>
       <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
         <div className="max-w-screen-xl m-0 sm: bg-white shadow sm:rounded-lg flex justify-center flex-1">
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div className="text-center">
-              <AcmeLogo className="w-32 mx-auto" />
             </div>
-            <div className="mt-12 flex flex-col items-center">
+            <div className="mt-12 flex flex-col items-center drop-shadow-md">
               <h1 className="text-2xl xl:text-3xl font-extrabold">Log In</h1>
               <div className="mx-auto max-w-xs mt-5">
-                <input
-                  className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                  type="email"
-                  placeholder="Email"
-                />
-                <input
-                  className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                  type="password"
-                  placeholder="Password"
-                />
-                <button className="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                  <Input type="email" variant="underlined" label="Email" placeholder="Enter your email" className="pb-5"  />
+
+                  <Input
+                    label="Password"
+                    variant="underlined"
+                    placeholder="Enter your password"
+                    endContent={
+                      <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
+                        {isVisible ? (
+                          <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
+                        ) : (
+                          <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
+                        )}
+                      </button>
+                    }
+                    type={isVisible ? "text" : "password"}
+                    className="max-w-xs"
+                  />
+                  <div className="flex items-center justify-center">
+
+                  <Button size="md" color="primary" className="mt-5">
                   <svg
                     className="w-6 h-6 -ml-2"
                     fill="none"
@@ -33,13 +45,14 @@ export default function LogIn() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  >
+                    >
                     <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
                     <circle cx="8.5" cy="7" r="4" />
                     <path d="M20 8v6M23 11h-6" />
                   </svg>
-                  <span className="ml-3">Log In</span>
-                </button>
+                  <span>signup</span>
+                  </Button>  
+                    </div>
                 <p className="mt-6 text-xs text-gray-600 text-center">
                   I agree to 
                   <Link href="#" className="border-b border-gray-500 border-dotted">
