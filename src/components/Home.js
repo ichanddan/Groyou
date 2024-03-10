@@ -1,7 +1,6 @@
 import { Image } from "@nextui-org/react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 import React from "react";
-import About from "./About";
 
 export default function Home() {
   const defaultContent =
