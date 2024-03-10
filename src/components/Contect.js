@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Contect() {
+  const[name,setName]=useState("");
+  const[lastName,setLastName]=useState("");
+  const[email,setEmail]=useState("");
+  const[textArea,setTextArea]=useState("");
+  const[allEntry,setAllEntry]=useState([]);
+  const submitform=(e)=>{
+    e.preventDefault();
+    const setEntry={name:`${name + lastName}`, email:email,message:textArea};
+    setAllEntry([...allEntry,setEntry]);
+  }
   return (
     <div>
       <div className="w-full mx-auto mt-5">
@@ -24,7 +34,7 @@ export default function Contect() {
               </span>
             </div>
           </div>
-          <form className="md:col-span-8 p-10">
+          <form action="" onSubmit={submitform} className="md:col-span-8 p-10">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
@@ -38,6 +48,8 @@ export default function Contect() {
                   type="text"
                   placeholder="Enter your first name"
                   aria-label="Full name"
+                  value={name}
+                  onChange={(e)=>setName(e.target.value)}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
@@ -52,6 +64,8 @@ export default function Contect() {
                   type="text"
                   placeholder="Enter your last name"
                   aria-label="Full name"
+                  value={lastName}
+                  onChange={(e)=>setLastName(e.target.value)}
                 />
               </div>
             </div>
@@ -68,6 +82,8 @@ export default function Contect() {
                   type="email"
                   placeholder="Enter your email"
                   aria-label="Full name"
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -86,18 +102,15 @@ export default function Contect() {
                   type="email"
                   placeholder="Enter your massage"
                   aria-label="Full name"
+                  value={textArea}
+                  onChange={(e)=>setTextArea(e.target.value)}
                 ></textarea>
               </div>
               <div className="flex justify-between w-full px-3">
-                <div className="md:flex md:items-center">
-                  <label className="block text-gray-500 font-bold">
-                    <input className="mr-2 leading-tight" type="checkbox" />
-                    <span className="text-sm">Send me your newsletter!</span>
-                  </label>
-                </div>
                 <button
                   className="shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
                   type="submit"
+              
                 >
                   Send Message
                 </button>
