@@ -1,75 +1,119 @@
 import { Button, Image } from "@nextui-org/react";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {EyeFilledIcon} from "./passwordHide/EyeFilledIcon";
-import {EyeSlashFilledIcon} from "./passwordHide/EyeSlashFilledIcon";
-import {Input} from "@nextui-org/react";
-
+import { EyeFilledIcon } from "./passwordHide/EyeFilledIcon";
+import { EyeSlashFilledIcon } from "./passwordHide/EyeSlashFilledIcon";
+import { Input } from "@nextui-org/react";
 
 export default function SignUp() {
   const [isVisible, setIsVisible] = React.useState(false);
   const toggleVisibility = () => setIsVisible(!isVisible);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [allEntry, setAllEntry] = useState([]);
+  const submitform = (e) => {
+    e.preventDefault();
+    const setEntry = {
+      name: name ,
+      email: email,
+      password: password,
+    };
+    setAllEntry([...allEntry, setEntry]);
+  };
   return (
     <div>
       <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
         <div className="max-w-screen-xl m-0 sm: bg-white shadow sm:rounded-lg flex justify-center flex-1">
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-            <div className="text-center">
-            </div>
+            <div className="text-center"></div>
             <div className="mt-12 flex flex-col items-center drop-shadow-md">
               <h1 className="text-2xl xl:text-3xl font-extrabold">Sign up</h1>
-              <div className="mx-auto max-w-xs mt-5">
-                
-                  <Input type="text" variant="underlined" label="Name" placeholder="Enter your name" className="pb-5"  />
-                  <Input type="email" variant="underlined" label="Email" placeholder="Enter your email" className="pb-5"  />
+              <form className="mx-auto max-w-xs mt-5" onSubmit={submitform}>
+                <Input
+                  type="text"
+                  variant="underlined"
+                  label="Name"
+                  placeholder="Enter your name"
+                  className="pb-5"
+                  value={name}
+                  onChange={(e)=>setName(e.target.value)}
+                />
+                <Input
+                  type="email"
+                  variant="underlined"
+                  label="Email"
+                  placeholder="Enter your email"
+                  className="pb-5"
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
+                />
 
-                  <Input
-                    label="Password"
-                    variant="underlined"
-                    placeholder="Enter your password"
-                    endContent={
-                      <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
-                        {isVisible ? (
-                          <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
+                <Input
+                  label="Password"
+                  variant="underlined"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e)=>setPassword(e.target.value)}
+                  endContent={
+                  <button
+                  className="focus:outline-none"
+                  type="button"
+                  onClick={toggleVisibility}
+                  >
+                      {isVisible ? (
+                        <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
                         ) : (
                           <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-                        )}
-                      </button>
-                    }
-                    type={isVisible ? "text" : "password"}
-                    className="max-w-xs"
+                          )}
+                    </button>
+                  }
+                  type={isVisible ? "text" : "password"}
+                  className="max-w-xs"
                   />
-                  <div className="flex items-center justify-center">
-
-                  <Button size="md" color="primary" className="mt-5">
-                  <svg
-                    className="w-6 h-6 -ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div className="flex items-center justify-center">
+                  <Button size="md" color="primary" className="mt-5" type="submit" >
+                    <svg
+                      className="w-6 h-6 -ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                     >
-                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                    <circle cx="8.5" cy="7" r="4" />
-                    <path d="M20 8v6M23 11h-6" />
-                  </svg>
-                  <span>signup</span>
-                  </Button>  
-                    </div>
+                      <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                      <circle cx="8.5" cy="7" r="4" />
+                      <path d="M20 8v6M23 11h-6" />
+                    </svg>
+                    <span>signup</span>
+                  </Button>
+                </div>
                 <p className="mt-6 text-xs text-gray-600 text-center">
                   I agree to
-                  <Link href="#" className="border-b border-gray-500 border-dotted">
-                   Terms of Service
+                  <Link
+                    href="#"
+                    className="border-b border-gray-500 border-dotted"
+                  >
+                    Terms of Service
                   </Link>
                   and its
-                  <Link href="#" className="border-b border-gray-500 border-dotted">
+                  <Link
+                    href="#"
+                    className="border-b border-gray-500 border-dotted"
+                  >
                     Privacy Policy
                   </Link>
                 </p>
-              </div>
+              </form>
               <div className="mt-3">
-                <h1>Do you hav a account <Link to='/login' className="text-red-500"> SignIn</Link></h1>
+                <h1>
+                  Do you hav a account{" "}
+                  <Link to="/login" className="text-red-500">
+                    {" "}
+                    SignIn
+                  </Link>
+                </h1>
               </div>
               <div className="w-full flex-1 mt-8">
                 <div className="flex flex-col items-center">
