@@ -174,14 +174,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Accordion>
-      <AccordionItem key="1" aria-label="Accordion 1" title="Accordion 1">
+      <Accordion className="p-16">
+      <AccordionItem key="1" aria-label="Accordion 1" title="What does abouts mean?">
         {defaultContent}
       </AccordionItem>
-      <AccordionItem key="2" aria-label="Accordion 2" title="Accordion 2">
+      <AccordionItem key="2" aria-label="Accordion 2" title="What is the English word for about?">
         {defaultContent}
       </AccordionItem>
-      <AccordionItem key="3" aria-label="Accordion 3" title="Accordion 3">
+      <AccordionItem key="3" aria-label="Accordion 3" title="What is the meaning of about in English grammar?">
         {defaultContent}
       </AccordionItem>
     </Accordion>
