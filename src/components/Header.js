@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button, Avatar} from "@nextui-org/react";
 import {AcmeLogo} from "./Logo";
 import { Link } from "react-router-dom";
 
@@ -65,6 +65,9 @@ export default function Header() {
         </Link>
           </Button>
         </NavbarItem>
+        <Link to="/profile">
+        <Avatar isBordered src="https://i.pravatar.cc/150?u=a04258a2462d826712d" />
+        </Link>
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((menuItem, index) => (

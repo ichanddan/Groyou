@@ -27,11 +27,11 @@ export default function About() {
                 <br class="block sm:hidden" />
                 Ask me on{" "}
                 <Link
-                  href="#"
+                  to="https://linkedin.com/in/ichanddan"
                   title=""
                   class="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline"
                 >
-                  Twitter
+                  Linkedin
                 </Link>
               </p>
             </div>
