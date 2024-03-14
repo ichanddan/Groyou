@@ -5,9 +5,13 @@ export default function Profile() {
   return (
     <div className="flex items-center justify-center p-20">
       <div class="bg-white overflow-hidden shadow rounded-lg border">
-          <div className="flex items-center justify-center p-10">
-          <Avatar isBordered src="https://i.pravatar.cc/150?u=a04258a2462d826712d" className="w-40 h-40" />
-          </div>
+        <div className="flex items-center justify-center p-10">
+          <Avatar
+            isBordered
+            src="https://i.pravatar.cc/150?u=a04258a2462d826712d"
+            className="w-40 h-40"
+          />
+        </div>
         <div className="flex items-center justify-around">
           <div class="px-4 py-5 sm:px-6">
             <h3 class="text-lg leading-6 font-medium text-gray-900">

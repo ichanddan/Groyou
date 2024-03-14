@@ -6,11 +6,13 @@ export default function Blog() {
     <div>
       <div className="relative">
         <div className="max-w-3xl mb-10 rounded overflow-hidden flex flex-col mx-auto text-center">
-          <h1 className="max-w-3xl mx-auto text-xl sm:text-4xl font-semibold mt-5">The Best Activewear from the Nordstrom Anniversary Sale</h1>
-            <Image
-              src="https://images.pexels.com/photos/5120892/pexels-photo-5120892.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=625.0&sharp=10&w=1500"
-              className="w-full my-4"
-            />
+          <h1 className="max-w-3xl mx-auto text-xl sm:text-4xl font-semibold mt-5">
+            The Best Activewear from the Nordstrom Anniversary Sale
+          </h1>
+          <Image
+            src="https://images.pexels.com/photos/5120892/pexels-photo-5120892.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=625.0&sharp=10&w=1500"
+            className="w-full my-4"
+          />
           <hr />
         </div>
 
@@ -42,7 +44,6 @@ export default function Blog() {
                 publishing software like Aldus PageMaker including versions of
                 Lorem Ipsum.
               </p>
-
 
               <p className="text-base leading-8 my-5">
                 Lorem Ipsum is simply dummy text of the printing and typesetting

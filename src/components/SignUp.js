@@ -16,7 +16,7 @@ export default function SignUp() {
   const submitform = (e) => {
     e.preventDefault();
     const setEntry = {
-      name: name ,
+      name: name,
       email: email,
       password: password,
     };
@@ -38,7 +38,7 @@ export default function SignUp() {
                   placeholder="Enter your name"
                   className="pb-5"
                   value={name}
-                  onChange={(e)=>setName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                 />
                 <Input
                   type="email"
@@ -47,7 +47,7 @@ export default function SignUp() {
                   placeholder="Enter your email"
                   className="pb-5"
                   value={email}
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
 
                 <Input
@@ -55,25 +55,30 @@ export default function SignUp() {
                   variant="underlined"
                   placeholder="Enter your password"
                   value={password}
-                  onChange={(e)=>setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                   endContent={
-                  <button
-                  className="focus:outline-none"
-                  type="button"
-                  onClick={toggleVisibility}
-                  >
+                    <button
+                      className="focus:outline-none"
+                      type="button"
+                      onClick={toggleVisibility}
+                    >
                       {isVisible ? (
                         <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-                        ) : (
-                          <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-                          )}
+                      ) : (
+                        <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
+                      )}
                     </button>
                   }
                   type={isVisible ? "text" : "password"}
                   className="max-w-xs"
-                  />
+                />
                 <div className="flex items-center justify-center">
-                  <Button size="md" color="primary" className="mt-5" type="submit" >
+                  <Button
+                    size="md"
+                    color="primary"
+                    className="mt-5"
+                    type="submit"
+                  >
                     <svg
                       className="w-6 h-6 -ml-2"
                       fill="none"

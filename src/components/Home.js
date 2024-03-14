@@ -1,5 +1,5 @@
 import { Image } from "@nextui-org/react";
-import {Accordion, AccordionItem} from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 import React from "react";
 
 export default function Home() {
@@ -124,7 +124,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex flex-col items-start justify-center">
-                    <h4 className="font-bold text-gray-800">Chandan Kumar Maurya</h4>
+                    <h4 className="font-bold text-gray-800">
+                      Chandan Kumar Maurya
+                    </h4>
                     <p className="text-gray-600">CEO</p>
                   </div>
                 </div>
@@ -175,17 +177,28 @@ export default function Home() {
         </div>
       </section>
       <Accordion className="p-16">
-      <AccordionItem key="1" aria-label="Accordion 1" title="What does abouts mean?">
-        {defaultContent}
-      </AccordionItem>
-      <AccordionItem key="2" aria-label="Accordion 2" title="What is the English word for about?">
-        {defaultContent}
-      </AccordionItem>
-      <AccordionItem key="3" aria-label="Accordion 3" title="What is the meaning of about in English grammar?">
-        {defaultContent}
-      </AccordionItem>
-    </Accordion>
-    
+        <AccordionItem
+          key="1"
+          aria-label="Accordion 1"
+          title="What does abouts mean?"
+        >
+          {defaultContent}
+        </AccordionItem>
+        <AccordionItem
+          key="2"
+          aria-label="Accordion 2"
+          title="What is the English word for about?"
+        >
+          {defaultContent}
+        </AccordionItem>
+        <AccordionItem
+          key="3"
+          aria-label="Accordion 3"
+          title="What is the meaning of about in English grammar?"
+        >
+          {defaultContent}
+        </AccordionItem>
+      </Accordion>
     </div>
   );
 }

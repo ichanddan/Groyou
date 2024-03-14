@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 
 export default function Contect() {
-  const[name,setName]=useState("");
-  const[lastName,setLastName]=useState("");
-  const[email,setEmail]=useState("");
-  const[textArea,setTextArea]=useState("");
-  const[allEntry,setAllEntry]=useState([]);
-  const submitform=(e)=>{
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [textArea, setTextArea] = useState("");
+  const [allEntry, setAllEntry] = useState([]);
+  const submitform = (e) => {
     e.preventDefault();
-    const setEntry={name:`${name + lastName}`, email:email,message:textArea};
-    setAllEntry([...allEntry,setEntry]);
-  }
+    const setEntry = {
+      name: `${name + lastName}`,
+      email: email,
+      message: textArea,
+    };
+    setAllEntry([...allEntry, setEntry]);
+  };
   return (
     <div>
       <div className="w-full mx-auto mt-5">
@@ -49,7 +53,7 @@ export default function Contect() {
                   placeholder="Enter your first name"
                   aria-label="Full name"
                   value={name}
-                  onChange={(e)=>setName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
@@ -65,7 +69,7 @@ export default function Contect() {
                   placeholder="Enter your last name"
                   aria-label="Full name"
                   value={lastName}
-                  onChange={(e)=>setLastName(e.target.value)}
+                  onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
             </div>
@@ -83,7 +87,7 @@ export default function Contect() {
                   placeholder="Enter your email"
                   aria-label="Full name"
                   value={email}
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -103,14 +107,13 @@ export default function Contect() {
                   placeholder="Enter your massage"
                   aria-label="Full name"
                   value={textArea}
-                  onChange={(e)=>setTextArea(e.target.value)}
+                  onChange={(e) => setTextArea(e.target.value)}
                 ></textarea>
               </div>
               <div className="flex justify-between w-full px-3">
                 <button
                   className="shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
                   type="submit"
-              
                 >
                   Send Message
                 </button>
